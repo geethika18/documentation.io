@@ -1,0 +1,496 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title"></a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> </h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="kaizala-shared-code">Kaizala Shared Code</h1>
+				<p>React Native and C++ Shared Code repository for Kaizala.</p>
+				<h2 id="setup">Setup</h2>
+				<h3 id="1-node">1. Node</h3>
+				<h5 id="1-1-windows">1.1. Windows</h5>
+				<ol>
+					<li>Install <a href="https://chocolatey.org/">Chocolatey</a>.</li>
+					<li>Install <a href="https://www.npmjs.com">Node</a> using Chocolatey. Open a Command Prompt as Administrator, then run:<pre><code>choco <span class="hljs-keyword">install</span> nodejs.<span class="hljs-keyword">install</span>
+choco <span class="hljs-keyword">install</span> python2</code></pre></li>
+				</ol>
+				<h5 id="1-2-mac">1.2. Mac</h5>
+				<ol>
+					<li>Install <a href="http://brew.sh/">Homebrew</a>.</li>
+					<li>Install <a href="https://www.npmjs.com">Node</a> and Watchman using Homebrew. In a Terminal, run:<pre><code>brew install <span class="hljs-keyword">node</span>
+<span class="hljs-title">brew</span> install watchman</code></pre></li>
+				</ol>
+				<h3 id="2-react-native-and-typescript">2. React Native and TypeScript</h3>
+				<p>Install the React Native CLI and <a href="http://www.typescriptlang.org">TypeScript</a>. In a Terminal run:</p>
+				<pre><code><span class="hljs-built_in">npm</span> install -g react-<span class="hljs-keyword">native</span>-cli
+<span class="hljs-built_in">npm</span> install -g typescript</code></pre><h3 id="3-android-ios-repositories">3. Android/iOS repositories</h3>
+				<h5 id="3-1-prerequisite-generate-git-credentials">3.1. Prerequisite - Generate Git Credentials</h5>
+				<ol>
+					<li>Go to the <a href="https://office.visualstudio.com/DefaultCollection/OC/_git/MOIApps_Android">MOIApps_Android</a> repository.</li>
+					<li>Click on the &#39;Clone&#39; button (right-top)</li>
+					<li>Click <code>Generate Git Credentials</code>:<br><img src="./wiki/images/git-credentials.png" alt=""></li>
+				</ol>
+				<p>You will need the Credentials to set up the repository. If you lose it, you can generate one again.</p>
+				<h5 id="3-2-windows">3.2. Windows</h5>
+				<ol>
+					<li>Install Git. Open a Command Prompt as Administrator, then run:  <pre><code><span class="hljs-symbol">\\</span>modropserv<span class="hljs-symbol">\T</span>ools<span class="hljs-symbol">\M</span>OSetUp<span class="hljs-symbol">\M</span>OSetUp.bat</code></pre>The script will install Git (if it is not already) which will require a restart. After the restart run the command again in a Command Prompt as Administrator to resume the script.</li>
+					<li>When prompted, enter the full path to a working directory where the <strong>MOIApps_Android</strong> repository will be cloned.</li>
+					<li>When prompted, enter the Git Credentials generated above.</li>
+				</ol>
+				<h5 id="3-3-mac">3.3. Mac</h5>
+				<p>Clone the <strong>MOIApps_Android</strong> repository. In a Terminal run:</p>
+				<pre><code>git clone https:<span class="hljs-regexp">//</span>office.visualstudio.com<span class="hljs-regexp">/DefaultCollection/</span>OC<span class="hljs-regexp">/_git/</span>MOIApps_Android</code></pre><p>Clone the <strong>MOI_iOS</strong> repository. In a Terminal run:</p>
+				<pre><code>git clone https:<span class="hljs-regexp">//</span>office.visualstudio.com<span class="hljs-regexp">/DefaultCollection/</span>OC<span class="hljs-regexp">/_git/</span>MOI_iOS</code></pre><h3 id="4-moi-submodule">4. MOI submodule</h3>
+				<h5 id="4-1-android-windows-and-mac-">4.1. Android (Windows and Mac)</h5>
+				<ol>
+					<li>Clone the MOI submodule. In a Terminal run:<pre><code><span class="hljs-attr">cd</span> <span class="hljs-string">MOIApps_Android</span>
+<span class="hljs-attr">git</span> <span class="hljs-string">submodule init</span>
+<span class="hljs-attr">git</span> <span class="hljs-string">submodule update --remote</span></code></pre></li>
+					<li>Setup the submodule. In a Terminal run:<pre><code><span class="hljs-attr">cd</span> <span class="hljs-string">KaizalaS/kaizalaS</span>
+<span class="hljs-attr">npm</span> <span class="hljs-string">install</span></code></pre></li>
+				</ol>
+				<h5 id="4-2-ios-mac-only-">4.2. iOS (Mac only)</h5>
+				<ol>
+					<li>Clone the MOI submodule. In a Terminal run:<pre><code><span class="hljs-attr">cd</span> <span class="hljs-string">MOI_iOS</span>
+<span class="hljs-attr">git</span> <span class="hljs-string">submodule init</span>
+<span class="hljs-attr">git</span> <span class="hljs-string">submodule update --remote</span></code></pre></li>
+					<li>Setup the submodule. In a Terminal run:<pre><code><span class="hljs-attr">cd</span> <span class="hljs-string">Apps/kaizalaS/kaizalaS</span>
+<span class="hljs-attr">npm</span> <span class="hljs-string">install</span></code></pre></li>
+				</ol>
+				<h3 id="5-android-studio">5. Android Studio</h3>
+				<h5 id="5-1-windows">5.1. Windows</h5>
+				<p>The Windows enlistment setup will install Android Studio for you. </p>
+				<ol>
+					<li>Find and run the <code>mo_enlist</code> Desktop shortcut as Administrator.</li>
+					<li>Wait for the Nuget to download missing packages (first time).</li>
+					<li>Type <code>androidstudio</code> to launch the IDE.</li>
+					<li>Choose Custom setup instead of Standard and install the missing components mentioned below.</li>
+				</ol>
+				<h5 id="5-2-mac">5.2. Mac</h5>
+				<ol>
+					<li>Install <a href="https://developer.android.com/studio/index.html">Android Studio</a> from the Android developer website. </li>
+					<li>Create/edit the <code>.profile</code> in your Home folder. Add the following alias:<pre><code><span class="hljs-function"><span class="hljs-title">polymer</span><span class="hljs-params">()</span></span>
+{
+ ~/&lt;path-to-working-directory-from-Home&gt;/MOIApps_Android/tools/bin/set_env<span class="hljs-selector-class">.py</span>
+}</code></pre></li>
+					<li>Restart Terminal and run <code>polymer</code> to launch Android Studio</li>
+					<li>After running Android Studio for the first time choose Custom setup and install the missing components mentioned below.</li>
+				</ol>
+				<blockquote>
+					<p>If you get the &#39;command not found&#39; error when running <code>polymer</code>, then Terminal might be reading the <code>.bash_profile</code> instead of <code>.profile</code>. Move the alias defined in step 2 to <code>.bash_profile</code> and restart Terminal.</p>
+				</blockquote>
+				<h5 id="5-3-additional-requirements">5.3. Additional requirements</h5>
+				<p>Download the latest versions of the following components from the Android SDK manager:</p>
+				<ul>
+					<li>Android SDK Platform 25 (Nougat)</li>
+					<li>Android SDK Build-Tools</li>
+					<li>CMake</li>
+					<li>LLDB</li>
+					<li>Android SDK Platform Tools</li>
+					<li>Android SDK Tools</li>
+					<li>NDK</li>
+					<li>Android Support Repository</li>
+					<li>Google Repository</li>
+				</ul>
+				<h3 id="6-xcode-mac-only-">6. Xcode (Mac only)</h3>
+				<p>Install Xcode from the App Store.<br><img src="./wiki/images/app-store-xcode.png" alt=""></p>
+				<h3 id="7-visual-studio-code-optional-">7. Visual Studio Code (optional)</h3>
+				<p>If you plan on working on React Native, install <a href="https://code.visualstudio.com">Visual Studio Code</a>. It has complete TypeScript integration, which we use for React Native development.</p>
+				<h3 id="8-sourcetree-optional-">8. SourceTree (optional)</h3>
+				<p><a href="https://www.sourcetreeapp.com">SourceTree</a> is an alternative to using the Git CLI. Though it is not as powerful, most Git operations can be performed using SourceTree.</p>
+				<h2 id="build">Build</h2>
+				<h5 id="android">Android</h5>
+				<ol>
+					<li>Launch Android Studio using the methods mentioned earlier.</li>
+					<li>After the Gradle sync, check that you can see the C++ files under the kaizalaS module:<br><img src="./wiki/images/studio-cpp.png" alt=""><br>If you can&#39;t then select <code>Build &gt; Refresh Linked C++ Projects</code> from the Toolbar.</li>
+					<li>Build the project. First time build will take a long time (~30 mins).</li>
+					<li>Deploy Kaizala:<br><img src="./wiki/images/studio-deploy.png" alt="">  </li>
+				</ol>
+				<blockquote>
+					<p><strong>Pro Tip</strong>: Improve build time:</p>
+					<ol>
+						<li>Find the number of cores on your machine.</li>
+						<li>Navigate to your Android SDK folder. The location can be found from <code>Android Studio Settings &gt; Appearance &amp; Behaviour &gt; System Settings &gt; Android SDK</code>.</li>
+						<li>Go to the <code>ndk-bundle</code> folder.</li>
+						<li>Edit <code>ndk-build</code> and replace the line <code>@echo off %~dp0\build\ndk-build.cmd %</code> with <code>@echo off %~dp0\build\ndk-build.cmd -jN %*</code> where N is the number of cores. For example, <code>@echo off %~dp0\build\ndk-build.cmd -j4 %*</code> if you have 4 cores.</li>
+					</ol>
+				</blockquote>
+				<h5 id="ios">iOS</h5>
+				<ol>
+					<li>Launch Xcode.</li>
+					<li>Choose an emulator from the drop down list (top-left):<br><img src="./wiki/images/xcode-emulators.png" alt="">  </li>
+					<li>Deploy Kaizala:<br><img src="./wiki/images/xcode-deploy.png" alt="">  </li>
+				</ol>
+				<h2 id="contact">Contact</h2>
+				<ul>
+					<li>Harsh Vardhan Singh (<a href="mailto:harshvs@microsoft.com">harshvs@microsoft.com</a>)</li>
+					<li>Navin Thadani (<a href="mailto:navinth@microsoft.com">navinth@microsoft.com</a>)</li>
+				</ul>
+				<h2 id="further-reading">Further Reading</h2>
+				<ul>
+					<li><a href="./wiki/GitRampUp.md">Working with Git</a></li>
+					<li>Getting started with Obj-C and iOS Development</li>
+					<li><a href="./wiki/DebuggingCPP.md">Debugging C++ in Android Studio and Xcode</a></li>
+					<li>C++ Best Practices</li>
+					<li><a href="./wiki/RNRampUp.md">Working with React Native</a></li>
+					<li><a href="./wiki/RNBestPractices.md">React Native Best Practices</a></li>
+					<li><a href="./wiki/CodingConventions.md">Coding Conventions</a></li>
+				</ul>
+				<hr>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_appapis_.html">"<wbr>AppAPIs"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_constants_.html">"<wbr>Constants"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_formapis_.html">"<wbr>FormAPIs"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_internalapis_.html">"<wbr>InternalAPIs"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_kasassets_.html">"KASAssets"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_kasformemptymodule_.html">"KASForm<wbr>Empty<wbr>Module"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_kasformuxutils_.html">"KASFormUXUtils"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_nativeactiondesignerinterface_.html">"<wbr>Native<wbr>Action<wbr>Designer<wbr>Interface"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_nativeandroidinterface_.html">"<wbr>Native<wbr>Android<wbr>Interface"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_nativecommands_.html">"<wbr>Native<wbr>Commands"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_nativeinterface_.html">"<wbr>Native<wbr>Interface"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_nativeuwpinterface_.html">"<wbr>NativeUWPInterface"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_nativewebappinterface_.html">"<wbr>Native<wbr>Web<wbr>App<wbr>Interface"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_nativewebclientinterface_.html">"<wbr>Native<wbr>Web<wbr>Client<wbr>Interface"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_nativeiosinterface_.html">"<wbr>NativeiOSInterface"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_objectpolyfill_.html">"<wbr>Object<wbr>Polyfill"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_platform_.html">"<wbr>Platform"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_utils_.html">"<wbr>Utils"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_validator_.html">"<wbr>Validator"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_versionutil_.html">"<wbr>Version<wbr>Util"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_customnotificationmessage_.html">"model/<wbr>Custom<wbr>Notification<wbr>Message"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasactionpackageproperties_.html">"model/KASAction<wbr>Package<wbr>Properties"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasactionproperties_.html">"model/KASAction<wbr>Properties"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasactionpropertytype_.html">"model/KASAction<wbr>Property<wbr>Type"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasattachment_.html">"model/KASAttachment"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasattachmentfactory_.html">"model/KASAttachment<wbr>Factory"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasattachmentlistquestionconfig_.html">"model/KASAttachment<wbr>List<wbr>Question<wbr>Config"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasattachmentlistquestionresult_.html">"model/KASAttachment<wbr>List<wbr>Question<wbr>Result"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasattachmenttype_.html">"model/KASAttachment<wbr>Type"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasaudioattachment_.html">"model/KASAudio<wbr>Attachment"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasauthenticationtype_.html">"model/KASAuthentication<wbr>Type"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kascountryphonecode_.html">"model/KASCountry<wbr>Phone<wbr>Code"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasform_.html">"model/KASForm"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformaggregatedsummary_.html">"model/KASForm<wbr>Aggregated<wbr>Summary"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformbatchresponseunit_.html">"model/KASForm<wbr>Batch<wbr>Response<wbr>Unit"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformconversationtype_.html">"model/KASForm<wbr>Conversation<wbr>Type"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformflatsummary_.html">"model/KASForm<wbr>Flat<wbr>Summary"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformmessagesendstatus_.html">"model/KASForm<wbr>Message<wbr>Send<wbr>Status"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformprocessedsummary_.html">"model/KASForm<wbr>Processed<wbr>Summary"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformproperty_.html">"model/KASForm<wbr>Property"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformpropertyfactory_.html">"model/KASForm<wbr>Property<wbr>Factory"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformpropertytype_.html">"model/KASForm<wbr>Property<wbr>Type"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformpropertyupdatefactory_.html">"model/KASForm<wbr>Property<wbr>Update<wbr>Factory"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformpropertyupdateinfo_.html">"model/KASForm<wbr>Property<wbr>Update<wbr>Info"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformpropertyupdateoperation_.html">"model/KASForm<wbr>Property<wbr>Update<wbr>Operation"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformreaction_.html">"model/KASForm<wbr>Reaction"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformresponse_.html">"model/KASForm<wbr>Response"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformresponsenotificationmodel_.html">"model/KASForm<wbr>Response<wbr>Notification<wbr>Model"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformresultvisibility_.html">"model/KASForm<wbr>Result<wbr>Visibility"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasformusercapabilities_.html">"model/KASForm<wbr>User<wbr>Capabilities"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasforwardcontext_.html">"model/KASForward<wbr>Context"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasimageattachment_.html">"model/KASImage<wbr>Attachment"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasimagequestionconfig_.html">"model/KASImage<wbr>Question<wbr>Config"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kaslocation_.html">"model/KASLocation"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasnativetoolbarproperties_.html">"model/KASNative<wbr>Toolbar<wbr>Properties"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasnumericquestionresult_.html">"model/KASNumeric<wbr>Question<wbr>Result"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kaso365user_.html">"model/KASO365<wbr>User"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasoptionquestionresult_.html">"model/KASOption<wbr>Question<wbr>Result"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasoptionresult_.html">"model/KASOption<wbr>Result"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasphonenumber_.html">"model/KASPhone<wbr>Number"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasquestion_.html">"model/KASQuestion"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasquestionconfig_.html">"model/KASQuestion<wbr>Config"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasquestiondisplaytype_.html">"model/KASQuestion<wbr>Display<wbr>Type"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasquestionoption_.html">"model/KASQuestion<wbr>Option"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasquestionresult_.html">"model/KASQuestion<wbr>Result"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasquestiontype_.html">"model/KASQuestion<wbr>Type"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasuser_.html">"model/KASUser"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasvalidationrule_.html">"model/KASValidation<wbr>Rule"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasvideoattachment_.html">"model/KASVideo<wbr>Attachment"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_kasvisibilityrule_.html">"model/KASVisibility<wbr>Rule"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_model_notificationpriority_.html">"model/<wbr>Notification<wbr>Priority"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
