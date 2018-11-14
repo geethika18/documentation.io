@@ -2,4 +2,4 @@
 
 [Kaizala default documentation](default/index.html)
 
-[Kaizala custom documentation](minimal/index.html)
+[Kaizala minimal documentation](minimal/index.html)
